@@ -1,19 +1,10 @@
-# Kiri (කිරි) — AI Shopping Agent for Rakuten Ichiba 🛍️
+# Kiri (කිරි) — AI Shopping Agent for Mercari  🛍️
 
-A multilingual, full-screen conversational shopping agent over the
-[Rakuten Ichiba](https://www.rakuten.co.jp/) catalog. Kiri takes a Sri Lankan
-shopper from _"I'm not sure what to get"_ to the right item on Japan's largest
-marketplace — talking in **English, සිංහල, தமிழ், Singlish, or Tanglish** while
-searching a catalog that is entirely in Japanese.
 
-**🔗 Live demo:** https://kapruka-agent-sigma.vercel.app
-**🎬 Demo video:**
 
----
+## What Suki · スキ can do
 
-## What Kiri can do
-
-- **Speak how Sri Lankans speak** — mirrors the customer's language _and register_,
+- **Speak how Engilsh speak** — mirrors the customer's language _and register_,
   including mid-conversation switches and code-switched Singlish/Tanglish
 - **Bridge the language gap** — translates the shopper's intent into Japanese
   keywords for Rakuten, then explains the Japanese results back in their language
@@ -66,26 +57,7 @@ Claude Sonnet (via OpenAI-compatible gateway; model is env-configurable)
 FastAPI · httpx · Rakuten Ichiba Item Search API · OpenAI SDK (custom base_url) ·
 Next.js 16 · Tailwind v4 · react-markdown · Docker Compose · Render + Vercel
 
-## Keys you need
 
-| Variable | Where to get it |
-| --- | --- |
-| `AIM_API_KEY`, `AIM_BASE_URL`, `MODEL` | OpenAI directly (`sk-…`, `https://api.openai.com/v1`, `gpt-4o`) or any OpenAI-compatible gateway |
-| `RAKUTEN_APPLICATION_ID`, `RAKUTEN_ACCESS_KEY` | Free app registration at [webservice.rakuten.co.jp](https://webservice.rakuten.co.jp/) — the ID is a UUID, the access key starts with `pk_` |
-
-### Demo mode (no Rakuten keys)
-
-Set `RAKUTEN_DEMO_MODE=1` and the Rakuten keys become optional: the agent runs
-against the fixture catalog in [`backend/demo_fixtures.py`](backend/demo_fixtures.py)
-(18 items, ¥980–¥14,300) instead of the network. Only the transport is swapped —
-filtering, sorting, pagination, response shaping and the product cards all run
-the production code path, so the demo shows what the live path renders.
-
-The fixture products are **invented**: images are labelled placeholder SVGs, and
-each card links to a real Rakuten *search* for that product name rather than a
-fabricated item page. The UI shows a demo banner (driven by `GET /config`, never
-guessed client-side) so nobody mistakes it for the live catalog. You still need
-the LLM gateway keys — demo mode replaces Rakuten, not the model.
 
 ## Run with Docker
 
