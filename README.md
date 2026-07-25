@@ -1,4 +1,4 @@
-# Kiri (කිරි) — AI Shopping Agent for Mercari  🛍️
+#Suki · スキ — AI Shopping Agent for Mercari  🛍️
 
 
 
