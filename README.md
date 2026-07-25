@@ -15,8 +15,8 @@
 
 ### What it deliberately does not do
 
-Rakuten's public API is **read-only** — there is no order or payment endpoint.
-Kiri searches and recommends; each card deep-links to the real Rakuten item page
+Mercari's public API is **read-only** — there is no order or payment endpoint.
+Suki searches and recommends; each card deep-links to the real Rakuten item page
 where the customer checks out themselves. The prompt forbids promising orders,
 delivery dates or shipping costs.
 
